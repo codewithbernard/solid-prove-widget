@@ -1,4 +1,4 @@
-# React Widget Starter
+# Solid Prove Widget
 Minimalistic template to get started with widget development using React + Webpack utilizing Preact transforms for minimal bundle size
 
 ## 🧑‍🚀 Develop Locally
