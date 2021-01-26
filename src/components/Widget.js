@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import VerifyIcon from "./VerifyIcon";
 
 const Widget = () => {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div
       style={{
         display: "flex",
         position: "fixed",
-        left: 35,
+        left: 25,
         bottom: 35,
         boxShadow: "0px 0px 5px #ececec",
         borderRadius: 7.5,
@@ -17,7 +19,11 @@ const Widget = () => {
         overflow: "hidden",
         fontFamily: "sans-serif",
         padding: "0.3rem",
+        transition: "transform 1.2s ease, opacity .6s ease",
+        transform: `translateY(${clicked ? 250 : 0}px)`,
+        opacity: clicked ? 0 : 1,
       }}
+      onClick={() => setClicked(true)}
     >
       <div
         style={{
@@ -38,7 +44,7 @@ const Widget = () => {
         }}
       >
         <strong style={{ color: "#222f3e" }}>David from United Stades</strong>
-        <small style={{ color: "#576574", fontWeight: 100 }}>
+        <small style={{ color: "#576574", fontWeight: 100, opacity: 0.75 }}>
           Recently purchased something
         </small>
         <div
